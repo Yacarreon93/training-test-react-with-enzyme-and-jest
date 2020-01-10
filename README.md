@@ -82,3 +82,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
     - component (functions or classes)
     - component name
     - attrs & props object
+6.  react test enzyme rendered components with jest snapshots

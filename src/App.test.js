@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import toJson from 'enzyme-to-json';
 
 import App from './App';
 import { Title } from './App';
@@ -11,7 +12,7 @@ configure({ adapter: new Adapter() });
 describe('<App />', () => {
   const wrapper = shallow(<App />);
 
-  console.log(wrapper.debug());
+  // console.log(wrapper.debug());
   
   it ('should contain 1 p element', () => {
     expect(wrapper.find('p').length).toBe(1);
@@ -38,4 +39,10 @@ describe('<App />', () => {
     expect(wrapper.find(Title).dive().text()).toBe('Hello');
     expect(wrapper.find('Title').dive().text()).toBe('Hello');
   });
+
+  it('matches the snapshot', () => {
+    const tree = shallow(<App />);
+
+    expect(toJson(tree)).toMatchSnapshot();
+  })
 });
