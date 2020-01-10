@@ -73,3 +73,12 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 2.  react test against different react releases with enzyme
 3.  react shallow render a react component with enzyme
 4.  react find nodes from a shallow rendered component
+5.  react understand the different accepted selectors in enzyme
+    - element syntax: "p"
+    - class syntax: ".class-name"
+    - id syntax: "#someid"
+    - attr & props syntax: "[href='example']"
+    - contextual syntax: ".tyler .clark", ".tyler + .clark" , ".tyler ~ .clark"
+    - component (functions or classes)
+    - component name
+    - attrs & props object

@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-const Test = () => <div>Testing</div>;
+export const Title = ({ text }) => <div>{text}</div>;
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
         <li></li>
         <li></li>
       </ul>
-      <Test></Test>
+      <Title text="Hello" />
     </div>
   );
 }
