@@ -4,8 +4,7 @@ import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import toJson from 'enzyme-to-json';
 
-import App from './App';
-import { Title } from './App';
+import App, { Title, Link } from './App';
 
 configure({ adapter: new Adapter() });
 
@@ -44,5 +43,33 @@ describe('<App />', () => {
     const tree = shallow(<App />);
 
     expect(toJson(tree)).toMatchSnapshot();
-  })
+  });
+  
+  it('matches the snapshot', () => {
+    const tree = shallow(<App />);
+
+    expect(toJson(tree)).toMatchSnapshot();
+  });
+  
+  it('Link component accepts address prop', () => {
+    const linkWrapper = shallow(<Link address="www.google.com" />);
+
+    expect(linkWrapper.instance().props.address).toBe('www.google.com');
+  });
+  
+  it('a tag node renders href conrrectly', () => {
+    const linkWrapper = shallow(<Link address="www.google.com" />);
+
+    expect(linkWrapper.props().href).toBe('www.google.com');
+  });
+  
+  it('returns null with true hide prop', () => {
+    const linkWrapper = shallow(<Link hide={false} address="www.google.com" />);
+
+    expect(linkWrapper.find('a').length).toBe(1);
+
+    linkWrapper.setProps({ hide: true });
+
+    expect(linkWrapper.get(0)).toBeNull();
+  });
 });

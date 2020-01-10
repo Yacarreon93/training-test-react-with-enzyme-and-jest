@@ -4,11 +4,17 @@ import './App.css';
 
 export const Title = ({ text }) => <div>{text}</div>;
 
+export class Link extends React.Component {
+  render() {
+    return this.props.hide ? null : <a href={this.props.address}>Click</a>;
+  }
+}
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Welcome to React!</h1>
+        <h1>Welcome to React</h1>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.

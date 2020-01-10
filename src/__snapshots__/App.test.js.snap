@@ -43,3 +43,47 @@ exports[`<App /> matches the snapshot 1`] = `
   />
 </div>
 `;
+
+exports[`<App /> matches the snapshot 2`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <h1>
+      Welcome to React
+    </h1>
+    <img
+      alt="logo"
+      className="App-logo"
+      src="logo.svg"
+    />
+    <p>
+      Edit 
+      <code>
+        src/App.js
+      </code>
+       and save to reload.
+    </p>
+    <a
+      className="App-link"
+      href="https://reactjs.org"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Learn React
+    </a>
+  </header>
+  <ul
+    className="custom-list"
+  >
+    <li />
+    <li />
+    <li />
+  </ul>
+  <Title
+    text="Hello"
+  />
+</div>
+`;
