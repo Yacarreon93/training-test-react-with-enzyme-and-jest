@@ -72,3 +72,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 1.  react install enzyme and configure jest
 2.  react test against different react releases with enzyme
 3.  react shallow render a react component with enzyme
+4.  react find nodes from a shallow rendered component
