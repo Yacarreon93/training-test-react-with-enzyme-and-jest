@@ -1,6 +1,6 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { configure, shallow } from 'enzyme';
+// import { render } from '@testing-library/react';
+import { configure, shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import toJson from 'enzyme-to-json';
 
@@ -8,7 +8,7 @@ import App, { Title, Link } from './App';
 
 configure({ adapter: new Adapter() });
 
-describe('<App />', () => {
+describe('<App /> shallow rendering', () => {
   const wrapper = shallow(<App />);
 
   // console.log(wrapper.debug());
@@ -71,5 +71,19 @@ describe('<App />', () => {
     linkWrapper.setProps({ hide: true });
 
     expect(linkWrapper.get(0)).toBeNull();
+  });
+});
+
+describe('<App /> mount rendering', () => {
+  it('h1 contains correct text', () => {
+    const wrapper = mount(<App />);
+    expect(wrapper.find('h1').text()).toBe('Welcome to React');
+    wrapper.unmount(); // tests will not affect each other if they are using the same DOM
+  });
+
+  it('matches the snapshot', () => {
+    const tree = mount(<App />);
+    expect(toJson(tree)).toMatchSnapshot();
+    tree.unmount(); // tests will not affect each other if they are using the same DOM
   });
 });
