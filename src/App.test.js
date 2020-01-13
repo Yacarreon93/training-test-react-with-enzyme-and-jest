@@ -126,6 +126,16 @@ describe('<App /> shallow rendering', () => {
     expect(App.prototype.UNSAFE_componentWillReceiveProps.mock.calls.length).toBe(1);
     expect(wrapper.find('span.lifeCycle').text()).toBe('UNSAFE_componentWillReceiveProps');
   })
+
+  it('handleStrings function returns correctly', () => {
+    const wrapper = shallow(<App />);
+
+    const trueReturn = wrapper.instance().handleStrings('hello world');
+    const falseReturn = wrapper.instance().handleStrings('');
+
+    expect(trueReturn).toBe(true);
+    expect(falseReturn).toBe(false);
+  });
 });
 
 describe('<App /> mount rendering', () => {

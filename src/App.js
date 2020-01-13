@@ -24,7 +24,11 @@ class App extends React.Component {
 
   componentDidMount() {
     this.setState({ lifeCycle: 'componentDidMount' });
-  } 
+  }
+
+  handleStrings(str) {
+    return !!str;
+  }
 
   render() {
    const {
