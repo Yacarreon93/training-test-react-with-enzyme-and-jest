@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -11,14 +11,15 @@ export class Link extends React.Component {
 }
 
 function App() {
+  const [on, setOn] = useState(false);
+  const [input, setInput] = useState(false);
+
   return (
     <div className="App">
       <header className="App-header">
         <h1>Welcome to React</h1>
+        <h2>{input}</h2>
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -34,6 +35,9 @@ function App() {
         <li></li>
       </ul>
       <Title text="Hello" />
+      <p className="button-state">{on ? 'Yes!' : 'No!'}</p>
+      <button onClick={() => setOn(!on)}>Click</button>
+      <input type="text" onChange={e => setInput(e.currentTarget.value)} />
     </div>
   );
 }

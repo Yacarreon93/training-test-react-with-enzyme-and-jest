@@ -11,18 +11,12 @@ exports[`<App /> mount rendering matches the snapshot 1`] = `
       <h1>
         Welcome to React
       </h1>
+      <h2 />
       <img
         alt="logo"
         className="App-logo"
         src="logo.svg"
       />
-      <p>
-        Edit 
-        <code>
-          src/App.js
-        </code>
-         and save to reload.
-      </p>
       <a
         className="App-link"
         href="https://reactjs.org"
@@ -46,6 +40,20 @@ exports[`<App /> mount rendering matches the snapshot 1`] = `
         Hello
       </div>
     </Title>
+    <p
+      className="button-state"
+    >
+      No!
+    </p>
+    <button
+      onClick={[Function]}
+    >
+      Click
+    </button>
+    <input
+      onChange={[Function]}
+      type="text"
+    />
   </div>
 </App>
 `;
@@ -60,18 +68,12 @@ exports[`<App /> shallow rendering matches the snapshot 1`] = `
     <h1>
       Welcome to React
     </h1>
+    <h2 />
     <img
       alt="logo"
       className="App-logo"
       src="logo.svg"
     />
-    <p>
-      Edit 
-      <code>
-        src/App.js
-      </code>
-       and save to reload.
-    </p>
     <a
       className="App-link"
       href="https://reactjs.org"
@@ -91,6 +93,20 @@ exports[`<App /> shallow rendering matches the snapshot 1`] = `
   <Title
     text="Hello"
   />
+  <p
+    className="button-state"
+  >
+    No!
+  </p>
+  <button
+    onClick={[Function]}
+  >
+    Click
+  </button>
+  <input
+    onChange={[Function]}
+    type="text"
+  />
 </div>
 `;
 
@@ -104,18 +120,12 @@ exports[`<App /> shallow rendering matches the snapshot 2`] = `
     <h1>
       Welcome to React
     </h1>
+    <h2 />
     <img
       alt="logo"
       className="App-logo"
       src="logo.svg"
     />
-    <p>
-      Edit 
-      <code>
-        src/App.js
-      </code>
-       and save to reload.
-    </p>
     <a
       className="App-link"
       href="https://reactjs.org"
@@ -134,6 +144,20 @@ exports[`<App /> shallow rendering matches the snapshot 2`] = `
   </ul>
   <Title
     text="Hello"
+  />
+  <p
+    className="button-state"
+  >
+    No!
+  </p>
+  <button
+    onClick={[Function]}
+  >
+    Click
+  </button>
+  <input
+    onChange={[Function]}
+    type="text"
   />
 </div>
 `;
