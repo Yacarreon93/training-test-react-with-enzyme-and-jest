@@ -106,6 +106,26 @@ describe('<App /> shallow rendering', () => {
     expect(wrapper.find('.blue').length).toBe(0);
     expect(wrapper.find('.red').length).toBe(1);
   });
+
+  it('calls componentDidMount, update span text', () => {
+    jest.spyOn(App.prototype, 'componentDidMount');
+
+    const wrapper = shallow(<App />);
+
+    expect(App.prototype.componentDidMount.mock.calls.length).toBe(1);
+    expect(wrapper.find('span.lifeCycle').text()).toBe('componentDidMount');
+  })
+  
+  it('setProps calls UNSAFE_componentWillReceiveProps', () => {
+    jest.spyOn(App.prototype, 'UNSAFE_componentWillReceiveProps');
+    
+    const wrapper = shallow(<App />);
+    
+    wrapper.setProps({ hide: true });
+    
+    expect(App.prototype.UNSAFE_componentWillReceiveProps.mock.calls.length).toBe(1);
+    expect(wrapper.find('span.lifeCycle').text()).toBe('UNSAFE_componentWillReceiveProps');
+  })
 });
 
 describe('<App /> mount rendering', () => {

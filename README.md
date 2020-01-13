@@ -69,11 +69,11 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 ## Lessons:
 
-1.  react install enzyme and configure jest
-2.  react test against different react releases with enzyme
-3.  react shallow render a react component with enzyme
-4.  react find nodes from a shallow rendered component
-5.  react understand the different accepted selectors in enzyme
+1.  install enzyme and configure jest
+2.  test against different react releases with enzyme
+3.  shallow render a react component with enzyme
+4.  find nodes from a shallow rendered component
+5.  understand the different accepted selectors in enzyme
     - element syntax: "p"
     - class syntax: ".class-name"
     - id syntax: "#someid"
@@ -82,8 +82,9 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
     - component (functions or classes)
     - component name
     - attrs & props object
-6.  react test enzyme rendered components with jest snapshots
-7.  react test react component props with enzyme and jest
-8.  react fully render react components with enzyme
-9.  react test simulated event handlers with enzyme
-10. react test new component state with setstate in enzyme
+6.  test enzyme rendered components with jest snapshots
+7.  test react component props with enzyme and jest
+8.  fully render react components with enzyme
+9.  test simulated event handlers with enzyme
+10. test new component state with setstate in enzyme
+11. test react component lifecycle methods with enzyme

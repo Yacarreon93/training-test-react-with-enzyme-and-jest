@@ -15,13 +15,23 @@ class App extends React.Component {
     on: false,
     color: 'blue',
     input: '',
+    lifeCycle: '',
   };
+
+  UNSAFE_componentWillReceiveProps() {
+    this.setState({ lifeCycle: 'UNSAFE_componentWillReceiveProps' });
+  }
+
+  componentDidMount() {
+    this.setState({ lifeCycle: 'componentDidMount' });
+  } 
 
   render() {
    const {
       on,
       color,
       input,
+      lifeCycle,
     } = this.state;
 
     return (
@@ -48,6 +58,7 @@ class App extends React.Component {
         <p className="button-state">{on ? 'Yes!' : 'No!'}</p>
         <button onClick={() => this.setState({ on: !on })}>Click</button>
         <input type="text" onChange={e => this.setState({ input: e.currentTarget.value })} />
+        <span className="lifeCycle">{lifeCycle}</span>
       </div>
     );
   }
