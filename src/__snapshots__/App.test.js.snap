@@ -29,7 +29,9 @@ exports[`<App /> mount rendering matches the snapshot 1`] = `
     <ul
       className="custom-list"
     >
-      <li />
+      <li
+        className="blue"
+      />
       <li />
       <li />
     </ul>
@@ -86,7 +88,9 @@ exports[`<App /> shallow rendering matches the snapshot 1`] = `
   <ul
     className="custom-list"
   >
-    <li />
+    <li
+      className="blue"
+    />
     <li />
     <li />
   </ul>
@@ -138,7 +142,9 @@ exports[`<App /> shallow rendering matches the snapshot 2`] = `
   <ul
     className="custom-list"
   >
-    <li />
+    <li
+      className="blue"
+    />
     <li />
     <li />
   </ul>

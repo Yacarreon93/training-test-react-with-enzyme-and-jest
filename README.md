@@ -86,3 +86,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 7.  react test react component props with enzyme and jest
 8.  react fully render react components with enzyme
 9.  react test simulated event handlers with enzyme
+10. react test new component state with setstate in enzyme
