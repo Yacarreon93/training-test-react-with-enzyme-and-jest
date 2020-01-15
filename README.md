@@ -89,3 +89,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 10. test new component state with setstate in enzyme
 11. test react component lifecycle methods with enzyme
 12. test react component methods with enzyme
+13. test redux connect components with enzyme
