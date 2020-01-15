@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Form /> matches snapshot 1`] = `
+<form
+  data-testid="addUserForm"
+  onSubmit={[Function]}
+>
+  <h2>
+    INFO
+  </h2>
+  <input
+    data-testid="name"
+    onChange={[Function]}
+    placeholder="name"
+    type="text"
+    value=""
+  />
+  <input
+    data-testid="email"
+    onChange={[Function]}
+    placeholder="email"
+    type="text"
+    value=""
+  />
+  <input
+    data-testid="phone"
+    onChange={[Function]}
+    placeholder="phone"
+    type="text"
+    value=""
+  />
+  <div>
+    <input
+      checked={true}
+      data-testid="optIn"
+      onChange={[Function]}
+      onClick={[Function]}
+      placeholder="optIn"
+      type="checkbox"
+    />
+    <span
+      data-testid="promotionsP"
+    >
+      Receive promotions
+    </span>
+  </div>
+  <button
+    data-testid="submitButton"
+    type="submit"
+  >
+    ADD
+  </button>
+</form>
+`;

@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 
 import App from "./App";
+import Form from "./Form";
 import TodoList from "./TodoList";
 import * as serviceWorker from "./serviceWorker";
 import store from "./store";
@@ -13,6 +14,7 @@ ReactDOM.render(
   <Provider store={store}>
     <App />
     <TodoList />
+    <Form />
   </Provider>,
   document.getElementById("root")
 );
